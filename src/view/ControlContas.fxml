@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="582.0" prefWidth="1002.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ControlContasController">
+   <children>
+      <TabPane layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="Abrir Conta">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane prefHeight="44.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <Label text="Abrir Conta " BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="37.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                        </BorderPane>
+                        <AnchorPane layoutX="293.0" layoutY="69.0" prefHeight="302.0" prefWidth="514.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="293.0" AnchorPane.rightAnchor="-308.0" AnchorPane.topAnchor="69.0">
+                           <children>
+                              <Label layoutX="24.0" layoutY="35.0" prefHeight="23.0" prefWidth="108.0" text="Numero da Conta" />
+                              <Label layoutX="396.0" layoutY="37.0" prefHeight="19.0" prefWidth="43.0" text="Tipo" />
+                              <Label layoutX="25.0" layoutY="93.0" prefHeight="33.0" prefWidth="105.0" text="Numero da Mesa" />
+                              <Label layoutX="37.0" layoutY="166.0" text="Status da mesa" />
+                              <ComboBox fx:id="tipoDeConta" layoutX="451.0" layoutY="34.0" onAction="#desabilitaCampoMesa" prefWidth="150.0" />
+                              <TextField fx:id="statusDaMesa" disable="true" layoutX="136.0" layoutY="162.0" />
+                              <TextField fx:id="numeroDaConta" disable="true" editable="false" layoutX="136.0" layoutY="34.0" />
+                              <TextField fx:id="numeroDaMesa" layoutX="136.0" layoutY="97.0" />
+                              <Button layoutX="291.0" layoutY="97.0" mnemonicParsing="false" onAction="#checarMesa" prefHeight="29.0" prefWidth="89.0" styleClass="danger" text="checar" />
+                              <Button fx:id="btnAbrir" layoutX="327.0" layoutY="231.0" mnemonicParsing="false" onAction="#abrirConta" prefHeight="35.0" prefWidth="123.0" styleClass="success" text="Abrir Conta " />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Tirar Pedido">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="277.0" layoutY="86.0" prefHeight="302.0" prefWidth="514.0">
+                           <children>
+                              <Label layoutX="24.0" layoutY="35.0" prefHeight="23.0" prefWidth="108.0" text="Numero da mesa" />
+                              <Label layoutX="56.0" layoutY="93.0" prefHeight="19.0" prefWidth="55.0" text="Categoria" />
+                              <ComboBox fx:id="categoria" layoutX="129.0" layoutY="90.0" onAction="#atualizaComboProduto" prefWidth="150.0" />
+                              <TextField fx:id="tpedidoNumerodaMesa" layoutX="136.0" layoutY="34.0" />
+                              <Button layoutX="327.0" layoutY="231.0" mnemonicParsing="false" onAction="#registrarPedido" prefHeight="35.0" prefWidth="146.0" styleClass="success" text="Registrar Pedido" />
+                              <ComboBox fx:id="produto" layoutX="128.0" layoutY="139.0" prefWidth="150.0" />
+                              <Label layoutX="43.0" layoutY="142.0" prefHeight="19.0" prefWidth="55.0" text="Produto" />
+                              <TextField fx:id="tpedidoQuantidade" layoutX="469.0" layoutY="81.0" prefHeight="25.0" prefWidth="91.0" promptText="Quantidade" />
+                              <Label layoutX="383.0" layoutY="84.0" prefHeight="19.0" prefWidth="69.0" text="Quantidade" />
+                              <Label layoutX="373.0" layoutY="93.0" prefHeight="19.0" prefWidth="89.0" text="Tipo de Conta" visible="false" />
+                              <TextField fx:id="tpedidoNumerodaMesa1" editable="false" layoutX="469.0" layoutY="34.0" />
+                              <Label layoutX="357.0" layoutY="35.0" prefHeight="23.0" prefWidth="108.0" text="Numero da conta" />
+                           </children>
+                        </AnchorPane>
+                        <BorderPane layoutX="141.0" layoutY="14.0" prefHeight="46.0" prefWidth="1002.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <Label text="Tirar Pedido" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="37.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                        </BorderPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Acompanhar pedido">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane prefHeight="553.0" prefWidth="1002.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <top>
+                              <Label style="-fx-label-padding: 20;" text="Acompanhar Pedido" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="37.0" />
+                                 </font>
+                              </Label>
+                           </top>
+                           <center>
+                              <AnchorPane prefHeight="412.0" prefWidth="1002.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TableView fx:id="listaAcompanhamento" layoutX="50.0" layoutY="56.0" prefHeight="403.0" prefWidth="1002.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="56.0">
+                                      <columns>
+                                        <TableColumn fx:id="nrconta" editable="false" prefWidth="111.0" style="-fx-alignment: center;" text="Conta " />
+                                        <TableColumn fx:id="nrmesa" minWidth="8.0" prefWidth="114.0" style="-fx-alignment: center;" text="Mesa" />
+                                          <TableColumn fx:id="nomeProduto" minWidth="0.0" prefWidth="274.0" style="-fx-alignment: center;" text="Produto" />
+                                          <TableColumn fx:id="preco" minWidth="5.0" prefWidth="110.0" style="-fx-alignment: center;" text="Preço" />
+                                          <TableColumn fx:id="quantidade" prefWidth="106.0" style="-fx-alignment: center;" text="Quantidade" />
+                                          <TableColumn fx:id="subtotal" prefWidth="73.0" style="-fx-alignment: center;" text="SubTotal" />
+                                      </columns>
+                                    </TableView>
+                                    <TextField fx:id="numeroDaMesaAcomp" layoutX="7.0" layoutY="2.0" prefHeight="21.0" prefWidth="199.0" promptText="Numero da mesa" AnchorPane.leftAnchor="50.0" />
+                                    <Button layoutX="257.0" layoutY="2.0" mnemonicParsing="false" onAction="#listarPedidos" styleClass="primary" text="Listar" />
+                                 </children>
+                              </AnchorPane>
+                           </center>
+                           <bottom>
+                              <AnchorPane prefHeight="90.0" prefWidth="1002.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label fx:id="totall" layoutX="229.0" layoutY="12.0" prefHeight="44.0" prefWidth="389.0" text="Total  :  ">
+                                       <font>
+                                          <Font name="Arial Black" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="486.0" layoutY="16.0" mnemonicParsing="false" onAction="#fecharConta" styleClass="danger" text="Fechar Conta" />
+                                 </children>
+                              </AnchorPane>
+                           </bottom>
+                        </BorderPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Acompanhar contas">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane prefHeight="553.0" prefWidth="1002.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <bottom>
+                              <AnchorPane prefHeight="90.0" prefWidth="1002.0" BorderPane.alignment="CENTER" />
+                           </bottom>
+                           <center>
+                              <AnchorPane prefHeight="412.0" prefWidth="1002.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TableView fx:id="camp" layoutX="50.0" layoutY="56.0" prefHeight="351.0" prefWidth="902.0" AnchorPane.bottomAnchor="-38.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="56.0">
+                                       <columns>
+                                          <TableColumn fx:id="colselecionado" editable="false" prefWidth="49.0" style="-fx-alignment: center;" visible="false" />
+                                          <TableColumn fx:id="cconta" editable="false" prefWidth="173.0" style="-fx-alignment: center;" text="Conta " />
+                                          <TableColumn fx:id="cmesa" minWidth="8.0" prefWidth="114.0" style="-fx-alignment: center;" text="Mesa" />
+                                          <TableColumn fx:id="cstatus" minWidth="0.0" prefWidth="164.0" style="-fx-alignment: center;" text="Status" />
+                                       </columns>
+                                    </TableView>
+                                    <Button layoutX="50.0" layoutY="14.0" mnemonicParsing="false" onAction="#listContas" prefHeight="25.0" prefWidth="70.0" styleClass="primary" text="Listar" />
+                                    <Button layoutX="138.0" layoutY="14.0" mnemonicParsing="false" onAction="#baixarComandasSelecionadas" prefHeight="25.0" prefWidth="106.0" styleClass="primary" text="Dar baixa" visible="false" />
+                                 </children>
+                              </AnchorPane>
+                           </center>
+                           <top>
+                              <Label style="-fx-label-padding: 20;" text="Acompanhar  conta" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="37.0" />
+                                 </font>
+                              </Label>
+                           </top>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

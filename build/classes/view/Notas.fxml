@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="365.0" prefWidth="365.0" stylesheets="@bootstrap.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.NotasController">
+   <children>
+      <Label layoutX="150.0" layoutY="14.0" text="Notas">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nrConta" focusTraversable="false" layoutX="118.0" layoutY="100.0" promptText="Numero da Conta" />
+      <Text layoutX="14.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero da conta" />
+      <Button layoutX="277.0" layoutY="100.0" mnemonicParsing="false" onAction="#listar" text="Listar" />
+      <ComboBox fx:id="valor" layoutX="118.0" layoutY="170.0" prefWidth="150.0" promptText="Valor Pago" />
+      <Button layoutX="99.0" layoutY="260.0" mnemonicParsing="false" onAction="#confirmar" styleClass="primary" text="Confirmar" />
+      <Button layoutX="224.0" layoutY="260.0" mnemonicParsing="false" onAction="#sair" prefHeight="32.0" prefWidth="66.0" styleClass="danger" text="Sair" />
+   </children>
+</AnchorPane>

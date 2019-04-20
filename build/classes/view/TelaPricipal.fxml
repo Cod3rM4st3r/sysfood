@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@bootstrap.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.TelaPrincipalController">
+   <children>
+      <MenuBar fx:id="barraMenu" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="51.0" prefWidth="600.0" style="-fx-background-color: white; -fx-pref-height: 35; -fx-padding: 0; -fx-border-color: black; -fx-border-style: solid;" styleClass="font-menu-button">
+        <menus>
+          <Menu mnemonicParsing="false" text="Caixa ">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#abrirCaixa" text="Abrir Caixa" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#feicharCaixa" text="Fechar Caixa" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Retirada" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Conta ">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#abrirConta" text="Controle de Contas" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirNotas" text="Notas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Produto">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#produto" text="Produto" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#categoria" text="Categoria" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Funcionarios" visible="false">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Cadastro de Funcionarios" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Relatórios">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Relatorio de Vendas por mes  " />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Relatorio de Vendas por ano  " />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#relatorioVendD" text="Relatorio de Vendas do dia " />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Relatorio de Estoque " />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Cadastros" visible="false">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Cadastro de Categoria" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Estoque " />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Configurações" visible="false">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Parametros" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Sair">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#sair" text="Teste" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="209.0" prefWidth="600.0" style="-fx-background-color: white; -fx-pref-height: 1300; -fx-pref-width: 1200;">
+         <children>
+            <BorderPane fx:id="borderpane" layoutX="166.0" layoutY="54.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children></AnchorPane>
+   </children>
+</VBox>

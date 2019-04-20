@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="control.CadastroDeCategoriaController">
+    <stylesheets>
+        <URL value="@bootstrap.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="nameCat" layoutX="212.0" layoutY="164.0" prefWidth="194.0" />
+      <Label layoutX="249.0" layoutY="14.0" text="Categoria">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="268.0" layoutY="301.0" mnemonicParsing="false" onAction="#cadastrar" text="Cadastrar" />
+      <Label layoutX="98.0" layoutY="171.0" text="Nome da categoria" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="558.0" prefWidth="378.0" stylesheets="@bootstrap.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.FeicharcontaController">
+   <children>
+      <Button layoutX="63.0" layoutY="485.0" mnemonicParsing="false" onAction="#imprimir" styleClass="primary" text="Fechar Conta" />
+      <Button layoutX="214.0" layoutY="485.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="25.0" prefWidth="86.0" styleClass="danger" text="Cancelar" />
+      <Label layoutX="121.0" layoutY="26.0" text="Fechamento">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nrValorField" disable="true" focusTraversable="false" layoutX="115.0" layoutY="197.0" promptText="Valor total" />
+      <TextField fx:id="nrValorPField" disable="true" focusTraversable="false" layoutX="115.0" layoutY="256.0" promptText="Valor 10%" />
+      <ComboBox fx:id="nrComboTp" layoutX="115.0" layoutY="314.0" prefHeight="25.0" prefWidth="149.0" promptText="Tipo de pagamento" visible="false" />
+      <TextField fx:id="nrMesaField" disable="true" focusTraversable="false" layoutX="115.0" layoutY="140.0" promptText="Numero da mesa" />
+      <TextField fx:id="nrContaField" disable="true" focusTraversable="false" layoutX="115.0" layoutY="93.0" promptText="Numero da conta" />
+      <Label layoutX="14.0" layoutY="100.0" text="Numero da Conta" />
+      <Label layoutX="14.0" layoutY="147.0" text="Numero da mesa" />
+      <Label layoutX="14.0" layoutY="204.0" text="Valor a pagar" />
+      <Label layoutX="14.0" layoutY="263.0" text="Valor + 10%" />
+      <ComboBox fx:id="vpago" layoutX="116.0" layoutY="373.0" prefHeight="25.0" prefWidth="149.0" promptText="Valor pago" visible="false" />
+   </children>
+</AnchorPane>
