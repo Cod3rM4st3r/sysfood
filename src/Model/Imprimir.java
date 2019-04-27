@@ -46,7 +46,7 @@ public class Imprimir {
     
     public void imprimirRelatorioDoDia(){
         NotaDao ndao = new NotaDao();
-        ArrayList<Nota> nota = ndao.getAlll();
+        ArrayList<Nota> nota = ndao.getAlll(new Funcoes().getData());
         String texto = "";
        
         texto +=" Data :" + new Funcoes().getDataH()+"\n";

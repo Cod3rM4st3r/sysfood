@@ -50,13 +50,12 @@ public class PedidoDao {
     
     public ArrayList<Pedidos> getAll(int nrmesa){
         ArrayList<Pedidos> pedidos = new ArrayList<>();
-        String sql = "select \n" +
+        String sql = "select cast(s.prod_preco as float) * cast(s.ped_qtde as float) as Sub_total,* from (select \n" +
                      "cont.numerodaconta,\n" +
                      "cont.nrmesa,\n" +
                      "prod.prod_nome,\n" +
                      "prod.prod_preco,\n" +
-                     "sum(ped.ped_qtde) as ped_qtde,\n" +
-                     "cast(prod.prod_preco as float) * cast(ped.ped_qtde as float) as Sub_total\n" +
+                     "sum(ped.ped_qtde) as ped_qtde\n" +
                      "from \n" +
                      "Pedido as ped inner join produto as prod on ped.ped_prod_cod = prod.prod_cod\n" +
                      "inner join conta as cont on cont.numerodaconta = ped.ped_nrconta\n" +
@@ -67,11 +66,9 @@ public class PedidoDao {
                 "cont.nrmesa,\n" +
                 "prod.prod_nome,\n" +
                 "prod.prod_preco,\n" +
-                "ped.ped_qtde,\n" +
-                "conta_status,\n" +
-                "Sub_total\n" +
+                "conta_status\n" +
                 "order by\n" +
-                "prod.prod_preco desc";
+                "prod.prod_preco desc) as s";
         try {
             PreparedStatement stm = this.conn.prepareStatement(sql);
             stm.setInt(1, nrmesa);

@@ -45,7 +45,7 @@ public class NotaDao {
     }
     
     
-    public ArrayList<Nota> getAlll(){
+    public ArrayList<Nota> getAlll(String data){
         String sql = "select\n" +
                     "c.nrmesa,\n" +
                     "c.numerodaconta,\n" +
@@ -53,6 +53,8 @@ public class NotaDao {
                     "n.valorpago\n" +
                     "from Nota as n\n" +
                     "inner join Conta as c on c.numerodaconta = n.nr_conta\n" +
+                    "where \n" +
+		    "c.dtaabertura = ?"+
                     "group by \n" +
                     "c.nrmesa,\n" +
                     "c.numerodaconta,\n" +
@@ -62,7 +64,7 @@ public class NotaDao {
         try {
             PreparedStatement stm = this.conn.prepareStatement(sql);
             
-           
+            stm.setString(1, data);
             
             ResultSet rs = stm.executeQuery();
             
