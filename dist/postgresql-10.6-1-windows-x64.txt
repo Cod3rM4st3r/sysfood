@@ -1,0 +1,2 @@
+postgresql-10.6-1-windows-x64
+postgresql-10.6-1-windows-x64
