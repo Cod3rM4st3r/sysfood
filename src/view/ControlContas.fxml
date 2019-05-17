@@ -60,6 +60,7 @@
                               <Label layoutX="373.0" layoutY="93.0" prefHeight="19.0" prefWidth="89.0" text="Tipo de Conta" visible="false" />
                               <TextField fx:id="tpedidoNumerodaMesa1" editable="false" layoutX="469.0" layoutY="34.0" />
                               <Label layoutX="357.0" layoutY="35.0" prefHeight="23.0" prefWidth="108.0" text="Numero da conta" />
+                              <Button layoutX="510.0" layoutY="231.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="68.0" text="Proximo" />
                            </children>
                         </AnchorPane>
                         <BorderPane layoutX="141.0" layoutY="14.0" prefHeight="46.0" prefWidth="1002.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -94,7 +95,7 @@
                                         <TableColumn fx:id="nrconta" editable="false" prefWidth="111.0" style="-fx-alignment: center;" text="Conta " />
                                         <TableColumn fx:id="nrmesa" minWidth="8.0" prefWidth="114.0" style="-fx-alignment: center;" text="Mesa" />
                                           <TableColumn fx:id="nomeProduto" minWidth="0.0" prefWidth="274.0" style="-fx-alignment: center;" text="Produto" />
-                                          <TableColumn fx:id="preco" minWidth="5.0" prefWidth="110.0" style="-fx-alignment: center;" text="Preço" />
+                                          <TableColumn fx:id="preco" minWidth="5.0" prefWidth="110.0" style="-fx-alignment: center;" text="Pre�o" />
                                           <TableColumn fx:id="quantidade" prefWidth="106.0" style="-fx-alignment: center;" text="Quantidade" />
                                           <TableColumn fx:id="subtotal" prefWidth="73.0" style="-fx-alignment: center;" text="SubTotal" />
                                       </columns>
